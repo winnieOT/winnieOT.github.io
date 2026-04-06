@@ -1,0 +1,337 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Everest Therapy to enquire about occupational therapy services. Appointments arranged directly by email. Free initial consultation available.">
+  <title>Contact — Everest Therapy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="page-wrapper">
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- —— Header ——————————————————————————————————— -->
+  <header class="site-header" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="../" class="nav-logo" aria-label="Everest Therapy — Home">
+        <span class="nav-logo-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+        </span>
+        <span>Everest Therapy</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle"
+              aria-expanded="false" aria-controls="nav-menu"
+              aria-label="Toggle navigation menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu" role="list">
+        <li><a href="../"       class="nav-link">Home</a></li>
+        <li><a href="../information/" class="nav-link">Information</a></li>
+        <li><a href="../services/"    class="nav-link">Services</a></li>
+        <li><a href="./"     class="nav-link nav-link--cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- —— Main ———————————————————————————————————— -->
+  <main id="main-content">
+
+    <!-- Page Banner -->
+    <section class="page-banner" aria-labelledby="page-heading">
+      <div class="container">
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb" role="list">
+            <li><a href="./">Home</a></li>
+            <li class="breadcrumb-sep" aria-hidden="true">/</li>
+            <li aria-current="page">Contact</li>
+          </ol>
+        </nav>
+        <h1 id="page-heading">Get in Touch</h1>
+        <p class="lead">Send us a message and we will get back to you to arrange your free consultation.</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section--white" aria-labelledby="contact-section-heading">
+      <div class="container">
+        <h2 id="contact-section-heading" class="sr-only">Contact form and information</h2>
+
+        <!-- Appointment note -->
+        <div class="notice notice--info" style="margin-bottom:2.5rem" role="note">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
+          <div class="notice-text">
+            <strong>Appointments are arranged directly by email — there is no online booking system.</strong>
+            Send us a message below (or email directly) and we will respond to arrange a convenient time for your free initial consultation. We aim to reply within 1—2 working days.
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr;gap:3rem;align-items:start">
+
+          <!-- Form column -->
+          <div>
+            <div class="form-card">
+              <h2 style="font-size:1.375rem;margin-bottom:.375rem">Send a Message</h2>
+              <p style="color:var(--clr-text-muted);font-size:.9375rem;margin-bottom:1.75rem">Fill in the form below and we will be in touch to arrange your free initial consultation.</p>
+
+              <!-- Inline feedback (shown on send error) -->
+              <div id="form-feedback" hidden role="alert" aria-live="assertive"></div>
+
+              <!-- Form wrapper (hidden on success) -->
+              <div id="form-wrap">
+                <form id="contact-form" novalidate aria-label="Contact form">
+                  <div class="form-grid form-grid--2">
+
+                    <!-- Full Name -->
+                    <div class="field">
+                      <label for="name">Full Name <span aria-hidden="true">*</span></label>
+                      <input type="text" id="name" name="name"
+                             autocomplete="name"
+                             required
+                             aria-required="true"
+                             aria-describedby="name-error"
+                             placeholder="Jane Smith">
+                      <span id="name-error" class="error-msg" role="alert" hidden></span>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="field">
+                      <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                      <input type="email" id="email" name="email"
+                             autocomplete="email"
+                             required
+                             aria-required="true"
+                             aria-describedby="email-error"
+                             placeholder="jane@example.com">
+                      <span id="email-error" class="error-msg" role="alert" hidden></span>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="field">
+                      <label for="phone">Phone Number <span class="optional">(optional)</span></label>
+                      <input type="tel" id="phone" name="phone"
+                             autocomplete="tel"
+                             placeholder="+44 7xxx xxxxxx">
+                    </div>
+
+                    <!-- Preferred contact -->
+                    <div class="field">
+                      <fieldset style="border:none;padding:0;margin:0">
+                        <legend style="font-size:.875rem;font-weight:600;color:var(--clr-text);margin-bottom:.5rem">Preferred Contact Method</legend>
+                        <div class="radio-group" role="radiogroup">
+                          <label class="radio-label">
+                            <input type="radio" name="preferred_contact" value="Email" checked>
+                            Email
+                          </label>
+                          <label class="radio-label">
+                            <input type="radio" name="preferred_contact" value="Phone">
+                            Phone
+                          </label>
+                        </div>
+                      </fieldset>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="field field--full">
+                      <label for="message">Message <span aria-hidden="true">*</span></label>
+                      <span class="field-hint" id="message-hint">Briefly describe your situation and what you are hoping occupational therapy can help with.</span>
+                      <textarea id="message" name="message"
+                                required
+                                aria-required="true"
+                                aria-describedby="message-error message-hint"
+                                placeholder="Please describe your situation and what you are hoping OT can help withâ€¦"></textarea>
+                      <span id="message-error" class="error-msg" role="alert" hidden></span>
+                    </div>
+
+                    <!-- Privacy note -->
+                    <div class="field--full">
+                      <p style="font-size:.8125rem;color:var(--clr-text-muted);line-height:1.6;margin:0">
+                        By submitting this form you agree that the information provided may be used to contact you about your enquiry. Your details will be kept securely and never shared with third parties. See our privacy policy for more information.
+                      </p>
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="field--full">
+                      <button type="submit" id="submit-btn" class="btn btn--cta btn--lg" style="width:100%;justify-content:center">
+                        <span id="btn-spinner" class="spinner" hidden aria-hidden="true"></span>
+                        <span id="btn-text">Send Message</span>
+                      </button>
+                    </div>
+
+                  </div>
+                </form>
+              </div>
+
+              <!-- Success state (shown after successful send) -->
+              <div id="form-success" hidden role="status" aria-live="polite" tabindex="-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <h3 style="margin-bottom:.625rem">Message Sent!</h3>
+                <p style="color:var(--clr-text-muted)">Thank you for getting in touch. We will review your message and aim to respond within 1—2 working days to arrange a convenient time for your free initial consultation.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Contact details below form -->
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:1.5rem;margin-top:3rem">
+
+          <div class="card" style="text-align:center">
+            <div class="card-icon" style="margin:0 auto 1rem" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+            </div>
+            <h3 style="font-size:1rem;margin-bottom:.375rem">Email</h3>
+            <a href="mailto:[your.email@example.com]" style="font-size:.9375rem;color:var(--clr-primary-dark)">[your.email@example.com]</a>
+            <p style="font-size:.8125rem;color:var(--clr-text-muted);margin-top:.375rem">We aim to reply within 1—2 working days</p>
+          </div>
+
+          <div class="card" style="text-align:center">
+            <div class="card-icon" style="margin:0 auto 1rem" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+            </div>
+            <h3 style="font-size:1rem;margin-bottom:.375rem">Phone</h3>
+            <a href="tel:[YourPhoneNumber]" style="font-size:.9375rem;color:var(--clr-primary-dark)">[Your Phone Number]</a>
+            <p style="font-size:.8125rem;color:var(--clr-text-muted);margin-top:.375rem">Appointments arranged by email or phone</p>
+          </div>
+
+          <div class="card" style="text-align:center">
+            <div class="card-icon" style="margin:0 auto 1rem" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+            </div>
+            <h3 style="font-size:1rem;margin-bottom:.375rem">Location</h3>
+            <span style="font-size:.9375rem;color:var(--clr-text)">[Your Location]</span>
+            <p style="font-size:.8125rem;color:var(--clr-text-muted);margin-top:.375rem">Home visits and remote sessions available</p>
+          </div>
+
+          <div class="card" style="text-align:center">
+            <div class="card-icon" style="margin:0 auto 1rem" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 style="font-size:1rem;margin-bottom:.375rem">Response Time</h3>
+            <span style="font-size:.9375rem;color:var(--clr-text)">1—2 working days</span>
+            <p style="font-size:.8125rem;color:var(--clr-text-muted);margin-top:.375rem">We will confirm your free consultation by email</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ section -->
+    <section class="section section--alt" aria-labelledby="faq-heading">
+      <div class="container">
+        <header class="section-header text-center">
+          <span class="section-subtitle">Common Questions</span>
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+        </header>
+
+        <div class="card-grid card-grid--2">
+
+          <article class="card">
+            <h3 style="font-size:1rem;margin-bottom:.5rem">How do I arrange an appointment?</h3>
+            <p>Send us an email or use the contact form on this page. There is no online booking system — all appointments are arranged directly with the occupational therapist via email or phone.</p>
+          </article>
+
+          <article class="card">
+            <h3 style="font-size:1rem;margin-bottom:.5rem">Is the initial consultation really free?</h3>
+            <p>Yes. The initial 30-minute consultation (phone or video) is completely free and carries no obligation. It is simply an opportunity to talk through your situation and explore how we can help.</p>
+          </article>
+
+          <article class="card">
+            <h3 style="font-size:1rem;margin-bottom:.5rem">Do you offer home visits?</h3>
+            <p>Yes. Home visits are available within our service area, and are particularly useful for home environment assessments. Remote sessions via phone or video call are also available.</p>
+          </article>
+
+          <article class="card">
+            <h3 style="font-size:1rem;margin-bottom:.5rem">How quickly will I receive a response?</h3>
+            <p>We aim to respond to all enquiries within 1—2 working days. If your matter is urgent, please make this clear in your message and we will do our best to prioritise your enquiry.</p>
+          </article>
+
+          <article class="card">
+            <h3 style="font-size:1rem;margin-bottom:.5rem">Can my insurance cover the cost?</h3>
+            <p>Many private health insurance policies include occupational therapy. We recommend checking directly with your insurer. We can provide invoices and receipts suitable for insurance claims.</p>
+          </article>
+
+          <article class="card">
+            <h3 style="font-size:1rem;margin-bottom:.5rem">Do I need a referral from my GP?</h3>
+            <p>No referral is needed for private occupational therapy. You are welcome to contact us directly. We are happy to liaise with your GP or other healthcare professionals with your consent.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- —— Footer ——————————————————————————————————— -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-text">
+          <h3>Everest Therapy</h3>
+          <p>Professional occupational therapy services focused on your independence, wellbeing, and quality of life.</p>
+          <div class="footer-reg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+            <span>OT Reg. (Ont.) Registered &nbsp;|&nbsp; RCOT Member</span>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links" role="list">
+            <li><a href="./">Home</a></li>
+            <li><a href="information/">Information</a></li>
+            <li><a href="services/">Services &amp; Fees</a></li>
+            <li><a href="contact/">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links" role="list">
+            <li><a href="services/">Assessments</a></li>
+            <li><a href="services/">Home Modifications</a></li>
+            <li><a href="services/">Mental Health OT</a></li>
+            <li><a href="services/">Return to Work</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+            <a href="mailto:[your.email@example.com]">[your.email@example.com]</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+            <a href="tel:[YourPhoneNumber]">[Your Phone Number]</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+            <span>[Your Location]</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year"></span> Everest Therapy. All rights reserved.</span>
+        <span>Registered with the OT Reg. (Ont.) &nbsp;|&nbsp; Professional Indemnity Insured</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top of page">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"/></svg>
+  </button>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
+
+
