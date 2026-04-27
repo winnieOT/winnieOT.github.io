@@ -358,7 +358,14 @@ main { flex: 1; }
    ───────────────────────────────────────────── */
 .hero {
   background: linear-gradient(135deg, var(--clr-primary-dark) 0%, var(--clr-secondary) 100%);
+  background-image: url('../images/bg-3.jpg'), linear-gradient(135deg, var(--clr-primary-dark) 0%, var(--clr-secondary) 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--clr-white);
+  display: flex;
+  align-items: center;
   padding-block: clamp(4rem, 10vw, 7rem);
   position: relative;
   overflow: hidden;
@@ -497,6 +504,10 @@ main { flex: 1; }
 }
 .section--dark {
   background: linear-gradient(135deg, var(--clr-primary-dark) 0%, var(--clr-secondary) 100%);
+  background-image: url('../images/bg-4.jpg'), linear-gradient(135deg, var(--clr-primary-dark) 0%, var(--clr-secondary) 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
 }
 .section--dark h2 { color: #fff; }
@@ -581,6 +592,12 @@ main { flex: 1; }
   display: flex;
   flex-direction: column;
   gap: .75rem;
+}
+.info-check-list--2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .75rem;
+  margin-top: 0;
 }
 .info-check-item {
   display: flex;
