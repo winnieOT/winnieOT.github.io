@@ -358,11 +358,11 @@ main { flex: 1; }
    ───────────────────────────────────────────── */
 .hero {
   background: linear-gradient(135deg, var(--clr-primary-dark) 0%, var(--clr-secondary) 100%);
-  background-image: url('../images/bg-3.jpg'), linear-gradient(135deg, var(--clr-primary-dark) 0%, var(--clr-secondary) 100%);
+  background-image: url('../images/header.jpg'), linear-gradient(135deg, var(--clr-primary-dark) 0%, var(--clr-secondary) 100%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
   color: var(--clr-white);
   display: flex;
   align-items: center;
@@ -504,7 +504,7 @@ main { flex: 1; }
 }
 .section--dark {
   background: linear-gradient(135deg, var(--clr-primary-dark) 0%, var(--clr-secondary) 100%);
-  background-image: url('../images/bg-4.jpg'), linear-gradient(135deg, var(--clr-primary-dark) 0%, var(--clr-secondary) 100%);
+  background-image: url('../images/footer.jpg'), linear-gradient(135deg, var(--clr-primary-dark) 0%, var(--clr-secondary) 100%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
