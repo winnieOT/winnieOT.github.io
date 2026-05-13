@@ -267,6 +267,13 @@ main { flex: 1; }
 }
 .nav-logo-icon svg { color: #fff; }
 
+.nav-logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+}
+
 .nav-menu {
   display: flex;
   align-items: center;
