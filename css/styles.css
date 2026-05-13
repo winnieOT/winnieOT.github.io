@@ -29,14 +29,14 @@
 :root {
   /* Colour Palette */
   --clr-primary:        #0891b2; /* cyan-600  */
-  --clr-primary-dark:   #578956; /* cyan-700  */
+  --clr-primary-dark:   #477495; /* cyan-700  */
   --clr-primary-light:  #cffafe; /* cyan-100  */
   --clr-secondary:      #0f766e; /* teal-700  */
   --clr-secondary-dark: #115e59; /* teal-800  */
-  --clr-cta:            #059669; /* emerald-600*/
+  --clr-cta:            #578956; /* emerald-600*/
   --clr-cta-dark:       #047857; /* emerald-700*/
   --clr-bg:             #f8fafc; /* slate-50  */
-  --clr-bg-alt:         #ecfeff; /* cyan-50   */
+  --clr-bg-alt:         #C8DCE3; /* cyan-50   */
   --clr-white:          #ffffff;
   --clr-text:           #0f172a; /* slate-900 */
   --clr-text-muted:     #475569; /* slate-600 */
@@ -267,6 +267,13 @@ main { flex: 1; }
 }
 .nav-logo-icon svg { color: #fff; }
 
+.nav-logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+}
+
 .nav-menu {
   display: flex;
   align-items: center;
@@ -382,8 +389,8 @@ main { flex: 1; }
 .hero-inner {
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr;
+  /* display: grid;
+  grid-template-columns: 1fr; */
   gap: 2.5rem;
   align-items: center;
 }
@@ -538,6 +545,7 @@ main { flex: 1; }
   gap: 1.5rem;
 }
 .card-grid--2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); }
+.card-grid--4 { grid-template-columns: repeat(4, 1fr); }
 
 .card {
   background: var(--clr-white);
@@ -582,6 +590,7 @@ main { flex: 1; }
   .info-block { grid-template-columns: 1fr 1fr; }
   .info-block.reverse > :first-child { order: 2; }
 }
+.info-block--single { grid-template-columns: 1fr !important; }
 
 .info-block-content h2 { margin-bottom: 1rem; }
 .info-block-content p  { color: var(--clr-text-muted); }
@@ -687,6 +696,17 @@ main { flex: 1; }
   padding: 1.5rem 1.75rem;
 }
 .service-card-body p { font-size: .9375rem; color: var(--clr-text-muted); line-height: 1.7; margin: 0; }
+
+.service-card-footer {
+  padding: 1rem 1.75rem;
+  border-top: 1px solid var(--clr-border);
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: .375rem;
+}
+.service-card-footer .price { font-size: 1.25rem; font-weight: 700; color: var(--clr-primary-dark); }
+.service-card-footer .price-label { font-size: .8125rem; color: var(--clr-text-muted); }
 
 .service-tag {
   display: inline-block;
