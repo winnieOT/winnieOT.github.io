@@ -30,12 +30,12 @@
   /* Colour Palette */
   --clr-primary:        #0891b2; /* cyan-600  */
   --clr-primary-dark:   #477495; /* cyan-700  */
-  --clr-primary-light:  #cffafe; /* cyan-100  */
-  --clr-secondary:      #0f766e; /* teal-700  */
-  --clr-secondary-dark: #115e59; /* teal-800  */
-  --clr-cta:            #578956; /* emerald-600*/
-  --clr-cta-dark:       #047857; /* emerald-700*/
-  --clr-bg:             #f8fafc; /* slate-50  */
+  --clr-primary-light:  #deeaf0; /* cyan-100  */
+  --clr-secondary:      #a0becf; /* teal-700  */
+  --clr-secondary-dark: #fda97e; /* teal-800  */
+  --clr-cta:            #4e804d; /* everest green*/
+  --clr-cta-dark:       #2f5230; /* emerald-700*/
+  --clr-bg:             #f2f3ed; /* slate-50  */
   --clr-bg-alt:         #C8DCE3; /* cyan-50   */
   --clr-white:          #ffffff;
   --clr-text:           #0f172a; /* slate-900 */
@@ -507,7 +507,7 @@ main { flex: 1; }
   background-color: var(--clr-bg-alt);
 }
 .section--white {
-  background-color: var(--clr-white);
+  background-color: var(--clr-bg);
 }
 .section--dark {
   background: linear-gradient(135deg, var(--clr-primary-dark) 0%, var(--clr-secondary) 100%);
