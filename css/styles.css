@@ -1247,7 +1247,7 @@ section[aria-labelledby="coverage-faq-heading"] .faq-question {
   text-transform: uppercase;
   letter-spacing: .05em;
 }
-.footer-links { display: flex; flex-direction: column; gap: .5rem; }
+.footer-links { display: flex; flex-direction: column; gap: .25rem; }
 .footer-links li,
 .footer-links a {
   font-size: .875rem;
@@ -1259,8 +1259,8 @@ section[aria-labelledby="coverage-faq-heading"] .faq-question {
 .footer-links a {
   text-decoration: none;
   transition: color var(--tr-base);
-  padding: .25rem 0;
-  min-height: 44px;
+  padding: .125rem 0;
+  min-height: 0;
   display: flex;
   align-items: center;
   gap: .375rem;
