@@ -928,8 +928,8 @@ section[aria-labelledby="coverage-faq-heading"] .faq-question {
   min-height: 76px;
   margin-top: auto;
 }
-.service-card-footer .price { font-size: .9rem; font-weight: 700; color: var(--clr-text-muted); }
-.service-card-footer .price-label { font-size: .8125rem; color: var(--clr-text-muted); }
+.service-card-footer .price { font-size: 1.1rem; font-weight: 700; color: var(--clr-text-muted); }
+.service-card-footer .price-label { font-size: .9rem; color: var(--clr-text-muted); }
 
 .service-tag {
   display: inline-block;
