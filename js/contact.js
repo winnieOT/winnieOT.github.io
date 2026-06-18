@@ -20,9 +20,9 @@
   'use strict';
 
   /* ── Configuration ── Replace these three values ── */
-  const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
-  const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
-  const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+  const EMAILJS_PUBLIC_KEY  = 'F1vbdmlgRLX3XM8z5';
+  const EMAILJS_SERVICE_ID  = 'service_s8zdv54';
+  const EMAILJS_TEMPLATE_ID = 'template_8gv4yfs';
   /* ─────────────────────────────────────────────────── */
 
   const form        = document.getElementById('contact-form');

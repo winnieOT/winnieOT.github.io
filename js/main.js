@@ -101,4 +101,68 @@
     });
   });
 
+  // ── Carousel ─────────────────────────────────────────────────
+  function initCarousel(el) {
+    const track         = el.querySelector('.carousel-track');
+    const cards         = Array.from(track.querySelectorAll('.card'));
+    const prevBtn       = el.querySelector('.carousel-btn--prev');
+    const nextBtn       = el.querySelector('.carousel-btn--next');
+    const dotsContainer = el.querySelector('.carousel-dots');
+    let currentIndex    = 0;
+
+    function slidesVisible() {
+      const viewport = el.querySelector('.carousel-viewport');
+      const w = viewport ? viewport.offsetWidth : el.offsetWidth;
+      if (w >= 700) return 3;
+      if (w >= 400) return 2;
+      return 1;
+    }
+
+    function maxIndex() {
+      return Math.max(0, cards.length - slidesVisible());
+    }
+
+    function buildDots() {
+      dotsContainer.innerHTML = '';
+      for (let i = 0; i <= maxIndex(); i++) {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot' + (i === currentIndex ? ' active' : '');
+        dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+        dot.setAttribute('role', 'listitem');
+        dot.addEventListener('click', () => goTo(i));
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    function goTo(index) {
+      const max = maxIndex();
+      if (index > max) index = 0;
+      if (index < 0)   index = max;
+      currentIndex = index;
+      const gap       = parseFloat(getComputedStyle(track).gap) || 24;
+      const cardWidth = cards[0].offsetWidth + gap;
+      track.style.transform = `translateX(${-currentIndex * cardWidth}px)`;
+      dotsContainer.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+      });
+    }
+
+    prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
+    nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        buildDots();
+        goTo(Math.min(currentIndex, maxIndex()));
+      }, 150);
+    }, { passive: true });
+
+    buildDots();
+    goTo(0);
+  }
+
+  document.querySelectorAll('.carousel').forEach(initCarousel);
+
 })();
